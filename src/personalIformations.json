@@ -14,7 +14,7 @@
             "description": [
                 "Design and build new front-end features and pages using React and Material UI (MUI).",
                 "Parse and present data coming from API.",
-                "Develop a internationalization project using the internationalization-framework i18next."
+                "Develop a internationalization project using the internationalization-framework i18next and AWS translation service."
             ],
             "technologies": ["React", "Material UI", "Python", "Figma"],
             "start": "March/2021",
