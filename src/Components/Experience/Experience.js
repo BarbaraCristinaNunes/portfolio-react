@@ -30,7 +30,7 @@ export default function About() {
                     container
                     direction="row"
                     justifyContent="space-between"
-                    alignItems="center"
+                    alignItems="flex-start"
                     style={{textAlign: "center"}}    
                 >
                     {
@@ -40,6 +40,7 @@ export default function About() {
                                     <Grid
                                         item
                                         xs={3}
+                                        sx={{padding: 5}}
                                     >
                                         <Text 
                                             title={experience.instituition}
@@ -53,18 +54,16 @@ export default function About() {
                                         />
                                     </Grid>
                                     <Grid
-                                        xs={8} 
+                                        xs={9} 
                                         sx={{padding: 5}}
                                     >
                                         <Text
                                             fontWeight="bold"
                                             time={0}
-                                            fontSize={16}
-                                            paragraph={experience.title}
+                                            // fontSize={16}
+                                            title={experience.title}
                                             aligment="center"
-                                        >
-                                            {experience.title}
-                                        </Text>
+                                        />
                                         {
                                             experience.description.map((paragraph, index) =>{
                                                 return (
@@ -74,6 +73,33 @@ export default function About() {
                                                         time={index}
                                                         fontWeight="regular"
                                                     />
+                                                )
+                                            })
+                                        }
+                                        <Text
+                                            fontWeight="bold"
+                                            time={0}
+                                            fontSize={16}
+                                            paragraph="Technologies learned"
+                                            aligment="center"
+                                        />
+                                        {
+                                            experience.technologies.map((technology, index) =>{
+                                                if(technology.toLowerCase() === "material ui"){
+                                                    return (
+                                                        <img 
+                                                            alt={technology.toLowerCase()} 
+                                                            src={`img/skills/mui.png`}
+                                                            style={{width: 50, margin: 10}}
+                                                        />
+                                                    )
+                                                }
+                                                return (
+                                                        <img 
+                                                            alt={technology.toLowerCase()} 
+                                                            src={`img/skills/${technology.toLowerCase()}.png`}
+                                                            style={{width: 50, margin: 10}}
+                                                        />
                                                 )
                                             })
                                         }
