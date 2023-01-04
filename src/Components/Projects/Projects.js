@@ -3,9 +3,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { Grid, Typography } from '@mui/material';
 import personalInformations from '../../personalIformations.json';
-import Text from './TextStyle';
-import Project from './Project';
-import { height, padding } from '@mui/system';
+import ProjectCard from './ProjectCard';
+
 export default function Projects() {
 console.log(personalInformations.projects)
 
@@ -30,51 +29,26 @@ console.log(personalInformations.projects)
                 <Grid 
                     container
                     direction="row"
-                    justifyContent="space-between"
-                    alignItems="center"
+                    justifyContent="space-around"
+                    alignItems="flex-start"
                     style={{textAlign: "center"}}    
                 >
                     {
                         personalInformations.projects.map((project) => {
                             return (
-                                <>
-                                    <Grid
-                                        item
-                                        xs={3}
-                                        sx={{
-                                            marginBottom: 5,
-                                            padding: 3
-                                        }}
-                                    >
-                                        <Box
-                                            component="img"
-                                            sx={{
-                                                width: "100%",
-                                                height: "auto",
-                                            }}
-                                            alt={project.title}
-                                            src={project.img}
-                                        />
-                                    </Grid>
-                                    <Grid
-                                        item
-                                        xs={3}
-                                        sx={{
-                                            marginBottom: 5,
-                                            padding: 3
-                                        }} 
-                                    >
-                                        <Text 
-                                            title={project.title}
-                                        />
-                                        <Text 
-                                            paragraph={project.description}
-                                            aligment="justify"
-                                            time={1}
-                                            fontWeight="regular"
-                                        />
-                                    </Grid>
-                                </>
+                                <Grid
+                                    item
+                                    xs={4}
+                                >
+                                    <ProjectCard 
+                                        title={project.title}
+                                        description={project.description}
+                                        image={project.img}
+                                        page={project.page}
+                                        repository={project.repository}
+                                        technologies={project.technologies}
+                                    />
+                                </Grid>
                             )
                         })
                     }
