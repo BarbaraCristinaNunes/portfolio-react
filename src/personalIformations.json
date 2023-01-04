@@ -16,7 +16,7 @@
                 "Parse and present data coming from API.",
                 "Develop a internationalization project using the internationalization-framework i18next and AWS translation service."
             ],
-            "technologies": ["React", "Material UI", "Python", "Figma"],
+            "technologies": ["React", "Material UI", "Python"],
             "start": "March/2021",
             "end": "June/2022"
         },
@@ -29,7 +29,7 @@
                 "During my training I could develop a full-stack skill set, building pages and applications in JavaScript and PHP and working with APIs. I also learned libraries such as Bootstrap and Material design.",
                 "The majority of my backend training had been in PHP, MySQL and Symfony."
             ],
-            "technologies": ["HTML", "CSS", "JavaScript", "PHP", "Angular", "MySQL", "Symfony", "Bootstrap", "Material Desing", "Git", "Typescript"],
+            "technologies": ["HTML", "CSS", "JavaScript", "PHP", "Angular", "MySQL", "Symfony", "Bootstrap", "Git", "Typescript"],
             "start": "October/2021",
             "end": "April/2022"
         }
@@ -39,17 +39,17 @@
             "title": "React-pokedex",
             "page": "https://barbaracristinanunes.github.io/react-pokedex/",
             "repository": "https://github.com/BarbaraCristinaNunes/react-pokedex",
-            "img": "pokedex.gif",
+            "img": "img/pokedex.gif",
             "description": ["It is a page where user can find all pokémons from the Japanese media franchise called Pokémon. The data used in this project come from the RESTful Pokémon API."],
-            "technologies": ["React", "Material UI"]
+            "technologies": ["React", "mui"]
         },
         {
             "title": "Poll manager system",
             "page": false,
             "repository": "https://github.com/BarbaraCristinaNunes/poll-manager",
-            "img": "pokedex.gif",
+            "img": "img/pokedex.gif",
             "description": "It is a page where user can create polls specifying the start and the end. Each poll has at least three options to be choosed, status, how many votes each opption has and total of votes.",
-            "technologies": ["React", "Material UI", "Node.js", "Sequelize", "MariaDB"]
+            "technologies": ["React", "mui", "node", "Sequelize", "MariaDB"]
         }
     ]
 }
