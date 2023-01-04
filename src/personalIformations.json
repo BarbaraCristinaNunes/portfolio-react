@@ -1,0 +1,55 @@
+{
+    "title": "I am Barbara Nunes!",
+    "about": [
+        "I am a brazilian women in a journey through technology world, discovering my path as a full stack developer. I am passionate about learning new technologies and I am not afraid of challenges.",
+        "I enjoy coding in Javascript and using React in my projects, but I am opened to work with all technologies related to web development. I love working with API's and would like to learn more about building API's.",
+        "Before I started my career as a developer I used to work as a Biologist. So I have 7 years experience with academic search in the ecology field and environmental analysis in botanical area.",
+        "During these previous experiences I could develop a good logical and analytical thinking and I had a lot of experience working on big projects and in teams with different backgrounds. Therefore I am able to work in a team to share my knowledge and learn with my colleague's."
+    ],
+    "experiences": [
+        {
+            "instituition": "let it fleet",
+            "link": "https://letitfleet.com/",
+            "title": "Full Stack Developer Intern",
+            "description": [
+                "Design and build new front-end features and pages using React and Material UI (MUI).",
+                "Parse and present data coming from API.",
+                "Develop a internationalization project using the internationalization-framework i18next."
+            ],
+            "technologies": ["React", "Material UI", "Python", "Figma"],
+            "start": "March/2021",
+            "end": "June/2022"
+        },
+        {
+            "instituition": "BeCode",
+            "link": "https://becode.org/learn/junior-web-developer/",
+            "title": "BeCode Web Development bootcamp",
+            "description": [
+                "The BeCode training is a program where job seekers learn technologies related to web development during 7 months, totalling 780 hours of training.",
+                "During my training I could develop a full-stack skill set, building pages and applications in JavaScript and PHP and working with APIs. I also learned libraries such as Bootstrap and Material design.",
+                "The majority of my backend training had been in PHP, MySQL and Symfony."
+            ],
+            "technologies": ["HTML", "CSS", "JavaScript", "PHP", "Angular", "MySQL", "Symfony", "Bootstrap", "Material Desing", "Git", "Typescript"],
+            "start": "October/2021",
+            "end": "April/2022"
+        }
+    ],
+    "projects": [
+        {
+            "title": "React-pokedex",
+            "page": "https://barbaracristinanunes.github.io/react-pokedex/",
+            "repository": "https://github.com/BarbaraCristinaNunes/react-pokedex",
+            "img": "pokedex.gif",
+            "description": ["It is a page where user can find all pokémons from the Japanese media franchise called Pokémon. The data used in this project come from the RESTful Pokémon API."],
+            "technologies": ["React", "Material UI"]
+        },
+        {
+            "title": "Poll manager system",
+            "page": false,
+            "repository": "https://github.com/BarbaraCristinaNunes/poll-manager",
+            "img": "pokedex.gif",
+            "description": "It is a page where user can create polls specifying the start and the end. Each poll has at least three options to be choosed, status, how many votes each opption has and total of votes.",
+            "technologies": ["React", "Material UI", "Node.js", "Sequelize", "MariaDB"]
+        }
+    ]
+}
