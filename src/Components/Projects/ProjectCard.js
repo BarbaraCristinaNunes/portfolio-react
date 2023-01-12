@@ -7,10 +7,9 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Text from './TextStyle';
-import LinkIcon from '@mui/icons-material/Link';
+import Text from '../TextStyle';
 import { Grid } from '@mui/material';
 
 const ExpandMore = styled((props) => {
@@ -33,16 +32,17 @@ export default function ProjectCard(props) {
     };
 
     return (
-        <Card sx={{ maxWidth: 345 }} elevation={24}>
+        <Card 
+         elevation={24}>
             <CardHeader
                 disableTypography={false}
                 titleTypographyProps={{variant: "overline", fontWeight: "bold", fontSize: 16}}
                 title={props.title}
+                variant="h4"
             />
             <CardMedia
                 component="img"
-                // width="10px"
-                // height="auto"
+                sx={{ maxHeight: 180}}
                 image={props.image}
                 alt={props.title}
             />
@@ -52,7 +52,7 @@ export default function ProjectCard(props) {
             </IconButton>
             {   props.page? 
                     <IconButton aria-label={`${props.title} page`} href={props.page} target="_blank" rel="noopener noreferrer">
-                        <LinkIcon color="secondary"/>
+                        <OpenInNewIcon color="secondary"/>
                     </IconButton>
                 : ""
             }
@@ -71,12 +71,13 @@ export default function ProjectCard(props) {
                     container
                     direction="row"
                     justifyContent="space-around"
-                    alignItems="flex-start"
+                    alignItems="center"
                     style={{textAlign: "center"}}
                 >
                     <Grid
                         item
                         xs={12}
+                        lg={12}
                     >
                         <Text 
                             paragraph={props.description}
@@ -87,21 +88,23 @@ export default function ProjectCard(props) {
                     </Grid>
                     <Grid
                         item
+                        lg={12}
                         xs={12}
                     >
                         <Text 
                             paragraph="Technologies used:"
                             aligment="justify"
-                            // time={1}
                             fontWeight="bold"
                         />
                     </Grid>
                     {
-                        props.technologies.map((technology) => {
+                        props.technologies.map((technology, index) => {
                             return (
                                 <Grid
+                                    key={`technologies${index}`}
                                     item
-                                    xs={2}
+                                    lg={2}
+                                    xs={6}
                                 >
                                     <img 
                                         alt={technology.toLowerCase()} 
@@ -113,7 +116,6 @@ export default function ProjectCard(props) {
                         })
                     }
                 </Grid>
-                
             </CardContent>
             </Collapse>
         </Card>
