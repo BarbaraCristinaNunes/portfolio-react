@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import personalInformations from '../../personalIformations.json';
-import Text from './TextStyle';
+import Text from '../TextStyle';
+import Image from '../ImageStyle';
 
 export default function About() {
-// console.log(personalInformations.experiences[0].technologies)
 
     return (
         <Box
@@ -15,7 +15,7 @@ export default function About() {
             flexWrap: 'wrap',
             '& > :not(style)': {
                 m: 1,
-                width: "100%",
+                width: "90%",
                 height: "auto",
             },
             }}
@@ -30,7 +30,7 @@ export default function About() {
                     container
                     direction="row"
                     justifyContent="space-between"
-                    alignItems="flex-start"
+                    alignItems="baseline"
                     style={{textAlign: "center"}}    
                 >
                     {
@@ -39,12 +39,15 @@ export default function About() {
                                 <>
                                     <Grid
                                         item
-                                        xs={3}
-                                        sx={{padding: 5}}
+                                        lg={3}
+                                        // md={12}
+                                        xs={12}
+                                        // sx={{padding: 5}}
                                     >
                                         <Text 
                                             title={experience.instituition}
                                             link={experience.link}
+                                            variant="h4"
                                         />
                                         <Text 
                                             variant="overline"
@@ -54,20 +57,23 @@ export default function About() {
                                         />
                                     </Grid>
                                     <Grid
-                                        xs={9} 
-                                        sx={{padding: 5}}
+                                        lg={9} 
+                                        // md={12}
+                                        xs={12}
+                                        sx={{paddingBottom: 5}}
                                     >
                                         <Text
                                             fontWeight="bold"
                                             time={0}
-                                            // fontSize={16}
                                             title={experience.title}
+                                            variant="h4"
                                             aligment="center"
                                         />
                                         {
                                             experience.description.map((paragraph, index) =>{
                                                 return (
                                                     <Text 
+                                                        key={`description${index}`}
                                                         paragraph={paragraph} 
                                                         aligment="justify"
                                                         time={index}
@@ -87,18 +93,18 @@ export default function About() {
                                             experience.technologies.map((technology, index) =>{
                                                 if(technology.toLowerCase() === "material ui"){
                                                     return (
-                                                        <img 
+                                                        <Image 
+                                                            key={`technology${index}`}
                                                             alt={technology.toLowerCase()} 
                                                             src={`img/skills/mui.png`}
-                                                            style={{width: 50, margin: 10}}
                                                         />
                                                     )
                                                 }
                                                 return (
-                                                        <img 
+                                                        <Image 
+                                                            key={`technology${index}`}
                                                             alt={technology.toLowerCase()} 
                                                             src={`img/skills/${technology.toLowerCase()}.png`}
-                                                            style={{width: 50, margin: 10}}
                                                         />
                                                 )
                                             })
