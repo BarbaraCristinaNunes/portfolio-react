@@ -15,7 +15,7 @@ console.log(personalInformations.projects)
             flexWrap: 'wrap',
             '& > :not(style)': {
                 m: 1,
-                width: "100%",
+                width: "90%",
                 height: "auto",
             },
             }}
@@ -29,16 +29,20 @@ console.log(personalInformations.projects)
                 <Grid 
                     container
                     direction="row"
-                    justifyContent="space-around"
+                    justifyContent="center"
                     alignItems="flex-start"
-                    style={{textAlign: "center"}}    
+                    style={{textAlign: "center"}} 
+                    spacing={4}   
                 >
                     {
-                        personalInformations.projects.map((project) => {
+                        personalInformations.projects.map((project, index) => {
                             return (
                                 <Grid
+                                    key={`${project}${index}`}
                                     item
-                                    xs={4}
+                                    lg={4}
+                                    md={4}
+                                    xs={12}
                                 >
                                     <ProjectCard 
                                         title={project.title}
