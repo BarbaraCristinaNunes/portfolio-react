@@ -1,15 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import personalInformations from '../../personalIformations.json';
-import Text from './TextStyle';
+import Text from '../TextStyle';
 
 export default function About() {
-    // let data = require("../../../public");
-    // console.log("ola", personalInformations.title)
-    // const title = Object.assign([], personalInformations.title.split(''));
-
+    
     return (
         <Box
             sx={{
@@ -17,7 +14,7 @@ export default function About() {
                 flexWrap: 'wrap',
                 '& > :not(style)': {
                     m: 1,
-                    width: "100%",
+                    width: "90%",
                     height: "auto",
                 },
             }}
@@ -26,7 +23,6 @@ export default function About() {
                 elevation={7} 
                 square={true} 
                 sx={{padding: 10}}
-                // variant="outlined"
             >
                 <Grid 
                     container
@@ -37,23 +33,27 @@ export default function About() {
                 >
                     <Grid 
                         item 
-                        xs={3} 
-                        // sx={{backgroundColor: "blue"}}
+                        lg={3}
+                        md={12}
+                        xs={12} 
                     >
-                        <Text title={personalInformations.title} />
+                        <Text title={personalInformations.title} variant="h1" aligment="right"/>
                     </Grid>
                     <Grid 
                         item 
-                        xs={8} 
-                        sx={{padding: 5}}
+                        lg={8}
+                        md={12}
+                        xs={12} 
                     >
                         {
                             personalInformations.about.map((paragraph, index) => {
                                 return (
-                                    <Text 
-                                        key={`paragraph${index}`} 
+                                    <Text
+                                        key={`about${index}`}
                                         paragraph={paragraph}
                                         time={index}
+                                        aligment="justify"
+                                        fontWeight="bold"
                                     /> 
                                 )
                             })
