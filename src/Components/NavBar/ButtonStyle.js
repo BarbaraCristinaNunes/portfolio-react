@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
 
 const CustomizedButton = styled(Button)(({ theme }) => ({
     color: "black",
@@ -37,9 +38,16 @@ export default function NavBarButton (props) {
 
     return (
         props.selected? 
-            <SelectedButton> {props.text} </SelectedButton>
+            <SelectedButton
+                // component={Link}
+                // to={`/${props.text.toLowerCase()}`}
+            > 
+                {props.text} 
+            </SelectedButton>
         :
             <CustomizedButton
+                // component={Link}
+                // to={`/${props.text.toLowerCase()}`}
                 onClick={(v) => {
                     let selectedStatusChanged = props.titles.map((title) => {
                         if(title.selected === true){
