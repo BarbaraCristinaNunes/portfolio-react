@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Grid from '@mui/material/Grid';
 import NavBarButton from './ButtonStyle';
 import { styled } from '@mui/material/styles';
-
+import { Link } from "react-router-dom";
 
 const CustomizedAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "white",
@@ -17,7 +17,6 @@ const CustomizedAppBar = styled(AppBar)(({ theme }) => ({
 }));
 
 export default function NavBar() {
-  // console.log("teste1")
   const  [
     titles = [
       {
@@ -33,7 +32,7 @@ export default function NavBar() {
         selected: false,
       },
       {
-        title: "Contact Me",
+        title: "Contact",
         selected: false,
       }
     ],
@@ -54,15 +53,21 @@ export default function NavBar() {
             {
               titles.map((title, index) => {
                 return (
-                  <Grid item xs={2}>
-                    <NavBarButton 
-                      key={`${title}${index}`}
-                      text= {title.title} 
-                      selected= {title.selected}
-                      index={index}
-                      titles={titles}
-                      setSelected={(v) => {setTitles(v)}}
-                    />
+                  <Grid 
+                    key={`${title}${index}`}
+                    item 
+                    xs={2}
+                  >
+                      <NavBarButton 
+                        // component={Link}
+                        // to={`/${title.title.toLowerCase()}`}
+                        text= {title.title} 
+                        selected= {title.selected}
+                        index={index}
+                        titles={titles}
+                        setSelected={(v) => {setTitles(v)}}
+                      />
+                    {/* </NavLink> */}
                   </Grid>
                 )
               })
