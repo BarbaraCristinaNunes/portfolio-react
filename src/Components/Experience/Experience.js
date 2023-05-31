@@ -3,8 +3,9 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { Grid } from '@mui/material';
 import personalInformations from '../../personalIformations.json';
-import Text from '../TextStyle';
-import Image from '../ImageStyle';
+import Text from '../Shared/TextStyle';
+import Image from '../Shared/ImageStyle';
+import Title from '../Shared/TitleStyle';
 
 export default function About() {
 
@@ -44,7 +45,7 @@ export default function About() {
                                         xs={12}
                                         // sx={{padding: 5}}
                                     >
-                                        <Text 
+                                        <Title 
                                             title={experience.instituition}
                                             link={experience.link}
                                             variant="h4"
@@ -57,12 +58,13 @@ export default function About() {
                                         />
                                     </Grid>
                                     <Grid
+                                        item
                                         lg={9} 
                                         // md={12}
                                         xs={12}
                                         sx={{paddingBottom: 5}}
                                     >
-                                        <Text
+                                        <Title
                                             fontWeight="bold"
                                             time={0}
                                             title={experience.title}

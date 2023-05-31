@@ -9,7 +9,7 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Text from '../TextStyle';
+import Text from '../Shared/TextStyle';
 import { Grid } from '@mui/material';
 
 const ExpandMore = styled((props) => {

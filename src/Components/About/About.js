@@ -3,7 +3,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { Grid } from '@mui/material';
 import personalInformations from '../../personalIformations.json';
-import Text from '../TextStyle';
+import Text from '../Shared/TextStyle';
+import Title from '../Shared/TitleStyle';
 
 export default function About() {
     
@@ -37,7 +38,7 @@ export default function About() {
                         md={12}
                         xs={12} 
                     >
-                        <Text title={personalInformations.title} variant="h1" aligment="right"/>
+                        <Title title={personalInformations.title} variant="h1" aligment="right"/>
                     </Grid>
                     <Grid 
                         item 

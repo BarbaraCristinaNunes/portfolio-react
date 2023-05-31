@@ -32,7 +32,7 @@ function App() {
   ]
   return (
     <>
-    {/* <NavBar/> */}
+    <NavBar/>
     <About/>
     <Experience/>
     <Projects/>
