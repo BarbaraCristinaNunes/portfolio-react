@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const CustomizedAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "white",
   transition: "0.5s",
-  opacity: 0.5,
+  opacity: 0.6,
   "&:hover": {
     opacity: 1,
   }
@@ -58,16 +58,13 @@ export default function NavBar() {
                     item 
                     xs={2}
                   >
-                      <NavBarButton 
-                        // component={Link}
-                        // to={`/${title.title.toLowerCase()}`}
-                        text= {title.title} 
-                        selected= {title.selected}
-                        index={index}
-                        titles={titles}
-                        setSelected={(v) => {setTitles(v)}}
-                      />
-                    {/* </NavLink> */}
+                    <NavBarButton 
+                      text= {title.title} 
+                      selected= {title.selected}
+                      index={index}
+                      titles={titles}
+                      setSelected={(v) => {setTitles(v)}}
+                    />
                   </Grid>
                 )
               })

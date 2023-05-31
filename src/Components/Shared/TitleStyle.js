@@ -10,16 +10,32 @@ import {
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
-const CustomizedTitle = styled(Typography)(({ theme }) => ({
+const CustomizedTitle = styled(Typography)(({ theme, align }) => ({
+    [theme.breakpoints.down('sm')]: {
+      textAlign: "center",
+    },
+    [theme.breakpoints.up('md')]: {
+      textAlign: "center",
+    },
+    [theme.breakpoints.up('md')]: {
+        textAlign: align,
+    },
+    backgroundImage: "linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)",
+    backgroundSize: "auto auto",
+    backgroundClip: "border-box",
+    //backgroundSize: "200% auto",
+    color: "#fff",
+    backgroundClip: "text",
+    textFillColor: "transparent",
+
+
     animation: "titleTransition 1.5s",
     "@keyframes titleTransition": {
         "from": {
             opacity: 0,
-            transform: "translate3d(-50px, 0, 0)",
         },
         "to": {
             opacity: 1,
-            transform: "translate3d(0, 0, 0)",
         }
     }
 }));

@@ -7,14 +7,16 @@ const CustomizedButton = styled(Button)(({ theme }) => ({
     color: "black",
     transition: "0.2s",
     paddingBottom: 0,
+    opacity: 0.6,
     "&:hover": {
         paddingBottom: 5,
         boxShadow: `0 0 6px 0 rgba(157, 96, 212, 0.5)`,
         border: `solid 3px transparent`,
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, #78e4ff, #ff48fa)`,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)`,
         backgroundOrigin: "border-box",
         backgroundClip: "content-box, border-box",
         boxShadow: "2px 1000px 1px #fff inset",
+        opacity: 1,
     }
 }));
 
@@ -24,7 +26,7 @@ const SelectedButton = styled(Button)(({ theme }) => ({
     paddingBottom: 0,
     boxShadow: `0 0 6px 0 rgba(157, 96, 212, 0.5)`,
     borderBlockEnd: `solid 3px transparent`,
-    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, #78e4ff, #ff48fa)`,
+    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)`,
     backgroundOrigin: "border-box",
     backgroundClip: "content-box, border-box",
     boxShadow: "2px 1000px 1px #fff inset",
@@ -38,16 +40,11 @@ export default function NavBarButton (props) {
 
     return (
         props.selected? 
-            <SelectedButton
-                // component={Link}
-                // to={`/${props.text.toLowerCase()}`}
-            > 
+            <SelectedButton> 
                 {props.text} 
             </SelectedButton>
         :
             <CustomizedButton
-                // component={Link}
-                // to={`/${props.text.toLowerCase()}`}
                 onClick={(v) => {
                     let selectedStatusChanged = props.titles.map((title) => {
                         if(title.selected === true){
