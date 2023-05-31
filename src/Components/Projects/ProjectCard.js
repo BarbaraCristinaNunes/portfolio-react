@@ -17,6 +17,11 @@ const ExpandMore = styled((props) => {
     return <IconButton {...other} />;})(({ theme, expand }) => ({
         transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
         marginLeft: 'auto',
+        color: "#ff1361",
+        "&:hover": {
+            color: "white",
+            backgroundColor: "#ff1361"
+        },
         transition: theme.transitions.create('transform', {
             duration: theme.transitions.duration.shortest,
         }
@@ -33,12 +38,14 @@ export default function ProjectCard(props) {
 
     return (
         <Card 
-         elevation={24}>
+            elevation={24}
+        >
             <CardHeader
                 disableTypography={false}
                 titleTypographyProps={{variant: "overline", fontWeight: "bold", fontSize: 16}}
                 title={props.title}
                 variant="h4"
+                style={{color: "#231557"}}
             />
             <CardMedia
                 component="img"
@@ -52,7 +59,7 @@ export default function ProjectCard(props) {
             </IconButton>
             {   props.page? 
                     <IconButton aria-label={`${props.title} page`} href={props.page} target="_blank" rel="noopener noreferrer">
-                        <OpenInNewIcon color="secondary"/>
+                        <OpenInNewIcon style={{color: "#ff1361"}}/>
                     </IconButton>
                 : ""
             }
@@ -82,7 +89,6 @@ export default function ProjectCard(props) {
                         <Text 
                             paragraph={props.description}
                             aligment="justify"
-                            // time={1}
                             fontWeight="regular"
                         />
                     </Grid>
