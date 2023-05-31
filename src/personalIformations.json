@@ -2,11 +2,23 @@
     "title": "I am Barbara Nunes!",
     "about": [
         "I am a Brazilian woman on a journey through the technology world, discovering my path as a full stack developer. I am passionate about learning new technologies and I am not afraid of challenges.",
-        "I enjoy coding in Javascript and using React in my projects, but I am open to work with all technologies related to web development. I love working with API's and would like to learn more about building API's.",
+        "Currently I am a junior software developer with skills in both frontend and backend programming languages and frameworks, frontend libraries such as Bootstrap and Material UI and a strong passion for building applications which provide good, clear and easy experience to users.",
         "Before I started my career as a developer I used to work as a Biologist. So I have 7 years experience with academic search in the ecology field and environmental analysis in botanical area.",
         "During these previous experiences I could develop a good logical and analytical thinking and I had a lot of experience working on big projects and in teams with different backgrounds. Therefore I am able to work in a team to share my knowledge and learn with my colleague's."
     ],
     "experiences": [
+        {
+            "instituition": "Blue Planet Academy & Consulting",
+            "link": "https://www.blue-planet.be/",
+            "title": "Junior Developer Intern",
+            "description": [
+                "During my internship I joined a training program in which I built an inventory management application using the framework Ruby on Rails. Therefore during three months I could learn the programming language Ruby, improve my skills related to SQL and database.",
+                "I also could get experience with the agile project management Jira, learn more about managing branch history and improve my knowledge about git commands."
+            ],
+            "technologies": ["Ruby", "Rails", "Postgresql", "Bootstrap"],
+            "start": "February/2023",
+            "end": "May/2023"
+        },
         {
             "instituition": "let it fleet",
             "link": "https://letitfleet.com/",
