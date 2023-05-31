@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 
 const CustomizedButton = styled(Button)(({ theme }) => ({
-    color: "black",
+    color: "#231557",
     transition: "0.2s",
     paddingBottom: 0,
     opacity: 0.6,
@@ -21,7 +21,7 @@ const CustomizedButton = styled(Button)(({ theme }) => ({
 }));
 
 const SelectedButton = styled(Button)(({ theme }) => ({
-    color: "black",
+    color: "#231557",
     transition: "0.2s",
     paddingBottom: 0,
     boxShadow: `0 0 6px 0 rgba(157, 96, 212, 0.5)`,
