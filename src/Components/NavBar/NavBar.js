@@ -1,11 +1,19 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Grid from '@mui/material/Grid';
 import NavBarButton from './ButtonStyle';
-import { styled } from '@mui/material/styles';
-import { Link } from "react-router-dom";
+import Logo from '../Shared/Logo'
+import { styled, useTheme } from '@mui/material/styles';
+import Drawer from '@mui/material/Drawer';
+import CssBaseline from '@mui/material/CssBaseline';
+//import MuiAppBar from '@mui/material/AppBar';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import AppBar from '@mui/material/AppBar';
 
 const CustomizedAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: "white",
@@ -30,10 +38,6 @@ export default function NavBar() {
       {
         title: "Projects",
         selected: false,
-      },
-      {
-        title: "Contact",
-        selected: false,
       }
     ],
     setTitles
@@ -46,17 +50,26 @@ export default function NavBar() {
           <Grid 
             container 
             direction="row"
-            justifyContent="space-between"
+            justifyContent="flex-start"
             alignItems="center"
             style={{textAlign: "center"}}
           >
+            <Grid 
+              item
+              xs={12}
+              md={1}
+              lg={1}
+            >
+              <Logo title="BN"/>
+            </Grid>
             {
               titles.map((title, index) => {
                 return (
                   <Grid 
-                    key={`${title}${index}`}
-                    item 
-                    xs={2}
+                    item
+                    key={`${title}${index}`} 
+                    md={2}
+                    lg={2}
                   >
                     <NavBarButton 
                       text= {title.title} 
