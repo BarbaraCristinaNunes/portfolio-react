@@ -11,10 +11,12 @@ export default function About() {
     return (
         <Box
             sx={{
+                
                 display: 'flex',
                 flexWrap: 'wrap',
+                marginTop: 10,
                 '& > :not(style)': {
-                    m: 1,
+                    m: "auto",
                     width: "90%",
                     height: "auto",
                 },

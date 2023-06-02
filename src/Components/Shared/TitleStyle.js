@@ -23,7 +23,6 @@ const CustomizedTitle = styled(Typography)(({ theme, align }) => ({
     backgroundImage: "linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)",
     backgroundSize: "auto auto",
     backgroundClip: "border-box",
-    //backgroundSize: "200% auto",
     color: "#fff",
     backgroundClip: "text",
     textFillColor: "transparent",

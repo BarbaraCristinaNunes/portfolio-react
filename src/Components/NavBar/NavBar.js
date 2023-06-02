@@ -7,84 +7,176 @@ import Logo from '../Shared/Logo'
 import { styled, useTheme } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
-//import MuiAppBar from '@mui/material/AppBar';
+import MuiAppBar from '@mui/material/AppBar';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import AppBar from '@mui/material/AppBar';
+import { Typography } from '@mui/material';
 
-const CustomizedAppBar = styled(AppBar)(({ theme }) => ({
+const drawerWidth = 240;
+
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== 'open',
+})(({ theme, open }) => ({
   backgroundColor: "white",
   transition: "0.5s",
   opacity: 0.6,
   "&:hover": {
     opacity: 1,
-  }
+  },
+  transition: theme.transitions.create(['margin', 'width'], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    width: "0%",
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }), 
+  }),
 }));
 
-export default function NavBar() {
-  const  [
-    titles = [
-      {
-        title: "About",
-        selected: true,
-      },
-      {
-        title: "Experience",
-        selected: false,
-      },
-      {
-        title: "Projects",
-        selected: false,
-      }
-    ],
-    setTitles
-  ] = React.useState();
+const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: 'flex-end',
+}));
+
+export default function PersistentDrawerLeft() {
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
+  const titles = [
+    "About",
+    "Experience",
+    "Projects",
+  ];
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <CustomizedAppBar position="static" color="transparent">
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <AppBar position="static" open={open}>
         <Toolbar>
-          <Grid 
+          <IconButton
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            fontSize="large"
+            sx={{ 
+              mr: 2, 
+              color: "#231557", 
+              "&:hover": {
+                color: "#ff1361",
+                backgroundColor: "#231557"
+              },
+              ...(open && { display: 'none' }) }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Logo title="BN"/>
+          <Typography variant='h5' sx={{color: "#231557", marginLeft: 2}}>
+            Software Developer
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+          },
+        }}
+        variant="temporary"
+        anchor="left"
+        open={open}
+      >
+        <DrawerHeader>
+          <Grid
             container 
             direction="row"
-            justifyContent="flex-start"
             alignItems="center"
+            justifyContent="flex-start"
             style={{textAlign: "center"}}
           >
-            <Grid 
+            <Grid
               item
-              xs={12}
-              md={1}
-              lg={1}
+              xs={8}
+              md={8}
+              lg={8}
+              paddingLeft={3}
             >
-              <Logo title="BN"/>
+              <Logo title="BN" />
             </Grid>
-            {
-              titles.map((title, index) => {
-                return (
-                  <Grid 
-                    item
-                    key={`${title}${index}`} 
-                    md={2}
-                    lg={2}
-                  >
-                    <NavBarButton 
-                      text= {title.title} 
-                      selected= {title.selected}
-                      index={index}
-                      titles={titles}
-                      setSelected={(v) => {setTitles(v)}}
-                    />
-                  </Grid>
-                )
-              })
-            }
+
+            <Grid
+              item
+              xs={2}
+              md={2}
+              lg={2}
+            >
+              <IconButton 
+                onClick={handleDrawerClose}
+                sx={{ 
+                  mr: 2, 
+                  color: "#231557", 
+                  "&:hover": {
+                    color: "#ff1361",
+                    backgroundColor: "#231557"
+                  }
+                }}
+              >
+                {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+              </IconButton>
+            </Grid>
           </Grid>
-        </Toolbar>
-      </CustomizedAppBar>
+          
+          
+        </DrawerHeader>
+        <Divider />
+        <Grid 
+          container 
+          direction="row"
+          justifyContent="flex-start"
+          alignItems="center"
+          style={{textAlign: "center"}}
+        >
+          {
+            titles.map((title, index) => {
+              return (
+                <Grid 
+                  item
+                  key={`${title}${index}`} 
+                  xs={12}
+                  md={12}
+                  lg={12}
+                  margin={2}
+                >
+                  <NavBarButton 
+                    title= {title} 
+                    index={index}
+                  />
+                </Grid>
+              )
+            })
+          }
+        </Grid>
+      </Drawer>
     </Box>
   );
 }

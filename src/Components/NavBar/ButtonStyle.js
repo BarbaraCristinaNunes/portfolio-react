@@ -25,10 +25,11 @@ export default function NavBarButton (props) {
     return (
         <CustomizedButton
             onClick={(v) => {
-                navigate(`/${props.titles[props.index].title.toLowerCase()}`);
+                navigate(`/${props.title.toLowerCase()}`);
+                props.setOpen(false)
             }}
         > 
-            {props.text} 
+            {props.title} 
         </CustomizedButton>
     )
 }
