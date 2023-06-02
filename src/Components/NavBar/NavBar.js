@@ -170,6 +170,7 @@ export default function PersistentDrawerLeft() {
                   <NavBarButton 
                     title= {title} 
                     index={index}
+                    setOpen={(v) => {setOpen(v)}}
                   />
                 </Grid>
               )
