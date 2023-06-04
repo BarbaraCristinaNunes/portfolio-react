@@ -12,7 +12,7 @@ theme = responsiveFontSizes(theme);
 
 const CustomizedParagraph = styled(Typography)(({ seconds }) => ({
     animation: `paragraphTransition ${seconds + 1}s`,
-    fontSize: 12.5,
+    fontSize: "0.8em",
     color: "#231557",
     "@keyframes paragraphTransition": {
         "from": {

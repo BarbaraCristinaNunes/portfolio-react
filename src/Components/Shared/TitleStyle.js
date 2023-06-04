@@ -13,11 +13,12 @@ theme = responsiveFontSizes(theme);
 const CustomizedTitle = styled(Typography)(({ theme, align }) => ({
     [theme.breakpoints.down('sm')]: {
       textAlign: "center",
+      fontSize: "1.75em"
     },
     [theme.breakpoints.up('md')]: {
       textAlign: "center",
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
         textAlign: align,
     },
     backgroundImage: "linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)",
@@ -28,15 +29,16 @@ const CustomizedTitle = styled(Typography)(({ theme, align }) => ({
     textFillColor: "transparent",
 
 
-    animation: "titleTransition 1.5s",
-    "@keyframes titleTransition": {
+    animation: "opacityTransition 1.5s",
+    "@keyframes opacityTransition": {
         "from": {
             opacity: 0,
         },
         "to": {
             opacity: 1,
         }
-    }
+    },
+
 }));
 
 export default function Title (props) {

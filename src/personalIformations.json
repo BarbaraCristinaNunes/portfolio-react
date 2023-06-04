@@ -104,5 +104,14 @@
             "description": "It was a BeCode's project whose goal was to create a CRUD system to store student, teacher and class information in the database. No login necessary, everyone with access can do anything in the files.",
             "technologies": ["PHP", "CSS", "Bootstrap"]
         }
+    ],
+    "frontendskills": [
+        "HTML", "CSS", "JavaScript", "React", "Material UI", "Bootstrap", "Angular"
+    ],
+    "backendskills": [
+        "Ruby", "PHP", "Node", "Postgresql", "MySQL"
+    ],
+    "othersskills": [
+        "Git", "Rails"
     ]
 }

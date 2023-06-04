@@ -5,9 +5,22 @@ import { Grid } from '@mui/material';
 import personalInformations from '../../personalIformations.json';
 import Text from '../Shared/TextStyle';
 import Title from '../Shared/TitleStyle';
-
+import { Typography } from '@mui/material';
+import SkillList from './SkillList';
+import Divider from '@mui/material/Divider';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CustomizedAccordion from './Accordion';
 export default function About() {
     
+    const [expanded, setExpanded] = React.useState(false);
+
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+    };
+
     return (
         <Box
             sx={{
@@ -25,7 +38,7 @@ export default function About() {
             <Paper
                 elevation={7} 
                 square={true} 
-                sx={{padding: 10}}
+                sx={{padding: 6}}
             >
                 <Grid 
                     container
@@ -36,7 +49,7 @@ export default function About() {
                 >
                     <Grid 
                         item 
-                        lg={3}
+                        lg={4}
                         md={12}
                         xs={12} 
                     >
@@ -44,7 +57,7 @@ export default function About() {
                     </Grid>
                     <Grid 
                         item 
-                        lg={8}
+                        lg={7}
                         md={12}
                         xs={12} 
                     >
@@ -62,6 +75,43 @@ export default function About() {
                             })
                         }
                     </Grid>
+                </Grid>
+                <Grid
+                    container
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="flex-start"
+                    style={{textAlign: "center", marginTop: 100}}
+                >
+                <Grid
+                        item
+                        lg={12}
+                        md={12}
+                        xs={12}
+                    >
+                        <Title
+                            fontWeight="bold"
+                            time={0}
+                            title="Main technical skills"
+                            variant="h4"
+                            aligment="center"
+                        />
+                    </Grid>
+                    <CustomizedAccordion 
+                        title="Frontend" 
+                        skills={personalInformations.frontendskills}
+                        panel="panel1"
+                    />
+                    <CustomizedAccordion 
+                        title="Backend" 
+                        skills={personalInformations.backendskills}
+                        panel="panel2"
+                    />
+                    <CustomizedAccordion 
+                        title="Others" 
+                        skills={personalInformations.othersskills}
+                        panel="panel3"
+                    />
                 </Grid>
             </Paper> 
         </Box>
