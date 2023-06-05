@@ -26,7 +26,6 @@ export default function About() {
                 elevation={7} 
                 square={true} 
                 sx={{padding: 10}}
-                // variant="outlined"
             >
                 <Grid 
                     container
@@ -36,15 +35,14 @@ export default function About() {
                     style={{textAlign: "center"}}    
                 >
                     {
-                        personalInformations.experiences.map((experience) => {
+                        personalInformations.experiences.map((experience, index) => {
                             return(
                                 <>
                                     <Grid
                                         item
                                         lg={3}
-                                        // md={12}
                                         xs={12}
-                                        // sx={{padding: 5}}
+                                        key={`${experience}${index}`}
                                     >
                                         <Title 
                                             title={experience.instituition}
@@ -61,7 +59,6 @@ export default function About() {
                                     <Grid
                                         item
                                         lg={9} 
-                                        // md={12}
                                         xs={12}
                                         sx={{paddingBottom: 5}}
                                     >
