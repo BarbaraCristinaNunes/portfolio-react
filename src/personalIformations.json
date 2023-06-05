@@ -81,7 +81,7 @@
             "technologies": ["Angular", "material-desing", "Typescript", "Bootstrap"]
         },
         {
-            "title": "Rock paper scissors lizard Spock",
+            "title": "Rock paper scissors lizard Spock Game",
             "page": "https://github.com/BarbaraCristinaNunes/rock-paper-scissors-lizard-spock",
             "repository": "https://barbaracristinanunes.github.io/rock-paper-scissors-lizard-spock/",
             "img": "img/projects/rock-paper-game.jpg",
@@ -89,7 +89,7 @@
             "technologies": ["HTML", "JavaScript", "CSS", "Bootstrap"]
         },
         {
-            "title": "Scrum Project",
+            "title": "Webshop Project",
             "page": "https://gbay-becode.000webhostapp.com/",
             "repository": "https://github.com/BarbaraCristinaNunes/scrum-project",
             "img": "img/projects/scrum.jpg",
