@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <NavBar/>
       <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="about" element={<About />} />
-        <Route path="experience" element={<Experience />} />
-        <Route path="projects" element={<Projects />} />
+        <Route path="portfolio-react/" element={<About />} />
+        <Route path="portfolio-react/about" element={<About />} />
+        <Route path="portfolio-react/experience" element={<Experience />} />
+        <Route path="portfolio-react/projects" element={<Projects />} />
       </Routes>
       <Footer/>
     </div>
