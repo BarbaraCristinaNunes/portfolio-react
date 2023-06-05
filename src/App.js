@@ -5,7 +5,7 @@ import Experience from './Components/Experience/Experience';
 import About from './Components/About/About';
 import Projects from './Components/Projects/Projects';
 import { Routes, Route } from 'react-router-dom';
-
+import Footer from './Components/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -16,6 +16,7 @@ function App() {
         <Route path="experience" element={<Experience />} />
         <Route path="projects" element={<Projects />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
