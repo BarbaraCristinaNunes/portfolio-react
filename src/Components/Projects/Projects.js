@@ -44,6 +44,17 @@ console.log(personalInformations.projects)
                                     lg={4}
                                     md={4}
                                     xs={12}
+                                    sx={{
+                                        animation: "opacityTransition 1.5s",
+                                        "@keyframes opacityTransition": {
+                                            "from": {
+                                                opacity: 0,
+                                            },
+                                            "to": {
+                                                opacity: 1,
+                                            }
+                                        },
+                                    }}
                                 >
                                     <ProjectCard 
                                         title={project.title}
