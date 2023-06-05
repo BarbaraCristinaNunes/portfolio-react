@@ -22,7 +22,7 @@ const BordedAccordion = styled(Accordion)(({ theme }) => ({
     animation: "moveTransition 2s",
     
     "@keyframes moveTransition": {
-        "from":  {top: -200, opacity: 0},
+        "from":  {top: -30, opacity: 0},
         "to":  {top: 0, opacity: 1},
 
       }
