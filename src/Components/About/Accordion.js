@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { Grid, Typography } from '@mui/material';
-import personalInformations from '../../personalIformations.json';
-import Title from '../Shared/TitleStyle';
 import SkillList from './SkillList';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
