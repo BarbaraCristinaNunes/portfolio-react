@@ -17,10 +17,11 @@ const ExpandMore = styled((props) => {
     return <IconButton {...other} />;})(({ theme, expand }) => ({
         transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
         marginLeft: 'auto',
-        color: "#ff1361",
+        color: "#231557",
+        backgroundColor: "#ff1361",
         "&:hover": {
-            color: "white",
-            backgroundColor: "#ff1361"
+            color: "#ff1361",
+            backgroundColor: "#231557"
         },
         transition: theme.transitions.create('transform', {
             duration: theme.transitions.duration.shortest,
