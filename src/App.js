@@ -7,14 +7,15 @@ import Projects from './Components/Projects/Projects';
 import { Routes, Route } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 function App() {
+  console.log(`ei: ${process.env.PUBLIC_URL}`)
   return (
     <div className="App">
       <NavBar/>
       <Routes>
-        <Route path="portfolio-react/" element={<About />} />
-        <Route path="portfolio-react/about" element={<About />} />
-        <Route path="portfolio-react/experience" element={<Experience />} />
-        <Route path="portfolio-react/projects" element={<Projects />} />
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<About />} />
+        <Route path={`${process.env.PUBLIC_URL}/about`} element={<About />} />
+        <Route path={`${process.env.PUBLIC_URL}/experience`} element={<Experience />} />
+        <Route path={`${process.env.PUBLIC_URL}/projects`} element={<Projects />} />
       </Routes>
       <Footer/>
     </div>
