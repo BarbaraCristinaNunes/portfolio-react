@@ -24,10 +24,6 @@ const AppBar = styled(MuiAppBar, {
   "&:hover": {
     opacity: 1,
   },
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
   ...(open && {
     width: "0%",
     transition: theme.transitions.create(['margin', 'width'], {

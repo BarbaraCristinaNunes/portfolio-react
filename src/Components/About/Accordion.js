@@ -8,7 +8,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
 
 const BordedAccordion = styled(Accordion)(({ theme }) => ({
-    boxShadow: `0 0 6px 0 rgba(157, 96, 212, 0.5)`,
     border: `solid 2px transparent`,
     backgroundImage: `linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)`,
     backgroundOrigin: "border-box",

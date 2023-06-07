@@ -5,21 +5,9 @@ import { Grid } from '@mui/material';
 import personalInformations from '../../personalIformations.json';
 import Text from '../Shared/TextStyle';
 import Title from '../Shared/TitleStyle';
-import { Typography } from '@mui/material';
-import SkillList from './SkillList';
-import Divider from '@mui/material/Divider';
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CustomizedAccordion from './Accordion';
-export default function About() {
-    
-    const [expanded, setExpanded] = React.useState(false);
 
-    const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-    };
+export default function About() {
 
     return (
         <Box

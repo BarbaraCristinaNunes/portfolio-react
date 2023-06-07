@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import personalInformations from '../../personalIformations.json';
 import ProjectCard from './ProjectCard';
 

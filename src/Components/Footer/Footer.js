@@ -6,11 +6,8 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Avatar from '@mui/material/Avatar';
 import { Button, Grid, Typography } from '@mui/material';
-import Logo from '../Shared/Logo'
-import { useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
-import ListItemText from '@mui/material/ListItemText';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import Obfuscate from 'react-obfuscate';
 
@@ -34,12 +31,6 @@ export default function FixedBottomNavigation() {
             window.removeEventListener('resize', updateDimension);
         })
     }, [screenSize])
-    const navigate = useNavigate();
-    const titles = [
-    "About",
-    "Experience",
-    "Projects",
-    ];
 
     return (
         <Box sx={{ display: 'flex', marginTop: 10 }}>
@@ -70,7 +61,6 @@ export default function FixedBottomNavigation() {
                             sx={{
                                 backgroundImage: "linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)",
                                 backgroundSize: "auto auto",
-                                backgroundClip: "border-box",
                                 color: "#fff",
                                 backgroundClip: "text",
                                 textFillColor: "transparent",
