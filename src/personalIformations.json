@@ -82,8 +82,8 @@
         },
         {
             "title": "Rock paper scissors lizard Spock Game",
-            "page": "https://github.com/BarbaraCristinaNunes/rock-paper-scissors-lizard-spock",
-            "repository": "https://barbaracristinanunes.github.io/rock-paper-scissors-lizard-spock/",
+            "page": "https://barbaracristinanunes.github.io/rock-paper-scissors-lizard-spock/",
+            "repository": "https://github.com/BarbaraCristinaNunes/rock-paper-scissors-lizard-spock",
             "img": "img/projects/rock-paper-game.jpg",
             "description": "It was a BeCode's project whose goal was to make a Rock paper scissors lizard Spock based on the original game 'Rock Paper Scissors'.",
             "technologies": ["HTML", "JavaScript", "CSS", "Bootstrap"]
