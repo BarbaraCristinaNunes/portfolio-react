@@ -23,7 +23,7 @@ export default function NavBarButton (props) {
     return (
         <CustomizedButton
             onClick={(v) => {
-                navigate(`portfolio-react/${props.title.toLowerCase()}`);
+                navigate(`/${props.title.toLowerCase()}`);
                 props.setOpen(false)
             }}
         > 
