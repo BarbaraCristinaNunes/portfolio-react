@@ -1,4 +1,4 @@
-My page [https://barbaracristinanunes.github.io/portfolio-react/]
+[My page] (https://barbaracristinanunes.github.io/portfolio-react/)
 
 # Getting Started with Create React App
 
